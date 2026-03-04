@@ -7,6 +7,8 @@ from datetime import datetime, timedelta
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, MessageHandler, filters, ContextTypes
 import config
+print(f"SUPABASE_URL from config: {config.SUPABASE_URL}")
+print(f"SUPABASE_KEY from config: {config.SUPABASE_KEY}")
 from database import Database
 import sys
 import os
