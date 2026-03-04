@@ -24,12 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: Set environment variables
-        run: |
-          echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" >> $GITHUB_ENV
-          echo "ADMIN_IDS=${{ secrets.ADMIN_IDS }}" >> $GITHUB_ENV
-          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> $GITHUB_ENV
-          echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> $GITHUB_ENV
-      
       - name: Run bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          ADMIN_IDS: ${{ secrets.ADMIN_IDS }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
         run: python bot.py
