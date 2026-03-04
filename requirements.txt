@@ -5,3 +5,4 @@ aiohttp==3.9.1
 requests==2.31.0
 brotli==1.1.0
 pytz==2023.3
+supabase==1.2.0
