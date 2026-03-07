@@ -1,8 +1,0 @@
-python-telegram-bot
-pymongo
-python-dotenv
-aiohttp
-requests
-brotli
-pytz
-supabase
